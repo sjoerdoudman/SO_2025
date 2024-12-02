@@ -1,0 +1,28 @@
+@layer components {
+
+    .main-nav ul li a {
+        @apply relative after:absolute after:w-[0%] after:bottom-0 after:left-0 after:translate-y-0 after:h-[2px] after:rounded-full after:duration-300;
+    }
+
+    .main-nav ul li a.router-link-active,
+    .main-nav ul li a:hover {
+        @apply after:w-full;
+    }
+
+    .container {
+        @apply w-full px-6 sm:px-10 md:px-single-space mx-auto;
+    }
+
+    .container-md {
+        @apply w-full lg:max-w-[90vw] px-6 sm:px-10 md:px-single-space mx-auto;
+    }
+
+    .container-sm {
+        @apply w-full md:max-w-[80vw] px-6 sm:px-10 md:px-single-space mx-auto;
+    }
+
+    .content-column {
+        @apply max-w-[800px];
+    }
+
+}

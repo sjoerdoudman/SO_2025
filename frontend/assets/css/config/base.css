@@ -1,0 +1,101 @@
+@layer base {
+    html {
+        @apply bg-black text-dark;
+    }
+
+    body {
+        @apply overflow-y-scroll overflow-x-hidden antialiased;
+    }
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5 {
+        @apply text-white;
+    }
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5 {
+        @apply leading-tight italic;
+    }
+
+    h2,
+    .h2 {
+        @apply text-[calc(1.5vw+1.5vh+1.5rem)];
+    }
+
+    h3,
+    .h3 {
+        @apply text-[calc(1.125vw+1.125vh+1.125rem)];
+    }
+
+    h4,
+    .h4 {
+        @apply text-[calc(.75vw+.75vh+.75rem)];
+    }
+
+    h5,
+    .h5 {
+        @apply text-[calc(.65vw+.65vh+.65rem)];
+    }
+
+    p,
+    .p {
+        @apply leading-relaxed text-base not-italic md:text-[calc(.5vw+.5vh+.5rem)];
+    }
+
+    .paragraph h1+p,
+    .paragraph .h1+p,
+    .paragraph h1+a,
+    .paragraph .h1+a,
+    .paragraph h1+ul,
+    .paragraph .h1+ul,
+    .paragraph h2+p,
+    .paragraph .h2+p,
+    .paragraph h2+a,
+    .paragraph .h2+a,
+    .paragraph h2+ul,
+    .paragraph .h2+ul,
+    .paragraph h3+p,
+    .paragraph .h3+p,
+    .paragraph h3+a,
+    .paragraph .h3+ul,
+    .paragraph p+p,
+    .paragraph p+ul,
+    .paragraph p+a,
+    .paragraphp+small,
+    .paragraph a+small {
+        @apply mt-half-space
+    }
+
+    .paragraph h5+p,
+    .paragraph .h5+p,
+    .paragraph h5+a,
+    .paragraph .h5+a,
+    .paragraph h5+ul,
+    .paragraph .h5+ul {
+        @apply mt-quarter-space
+    }
+
+    .paragraph p {
+        @apply text-light
+    }
+
+    small {
+        display: block;
+    }
+}
