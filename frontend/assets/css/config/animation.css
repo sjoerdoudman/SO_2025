@@ -39,4 +39,36 @@
         }
     }
 
+    .animation--emit {
+        animation: emit infinite;
+    }
+
+    @keyframes emit {
+        0% {
+            transform: translateX(0%);
+            opacity: 0;
+            bottom: 0;
+        }
+
+        25% {
+            opacity: 1;
+            transform: translateX(-30px);
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        70% {
+            transform: translateX(-10px);
+        }
+
+
+        100% {
+            transform: translateX(0);
+            bottom: 100%;
+            opacity: 0;
+        }
+    }
+
 }

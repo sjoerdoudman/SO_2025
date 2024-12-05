@@ -1,5 +1,8 @@
 export interface Image {
-    id: string,
-    url: string,
-    alt: string
+    alt: string,
+    sizes: {
+        sm: string,
+        md: string,
+        xl: string,
+    }
 }

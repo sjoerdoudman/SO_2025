@@ -7,49 +7,37 @@
 @import "./config/animation.css";
 
 @font-face {
-    font-family: Favorit;
-    src: url('../fonts/ABCFavorit-BoldItalic-Trial.ttf') format('ttf'),
-        url('../fonts/ABCFavorit-BoldItalic-Trial.woff2') format('woff2'),
-        /* Super Modern Browsers */
-        url('../fonts/ABCFavorit-BoldItalic-Trial.woff') format('woff');
-    /* Pretty Modern Browsers */
-    font-style: italic;
-    font-display: swap;
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: Favorit;
-    src: url('../fonts/ABCFavorit-BoldItalic-Trial.ttf') format('ttf'),
-        url('../fonts/ABCFavorit-BoldItalic-Trial.woff2') format('woff2'),
-        /* Super Modern Browsers */
-        url('../fonts/ABCFavorit-BoldItalic-Trial.woff') format('woff');
-    /* Pretty Modern Browsers */
-    font-style: italic;
-    font-display: swap;
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: Favorit;
-    src: url('../fonts/ABCFavorit-BookItalic-Trial.ttf') format('ttf'),
-        url('../fonts/ABCFavorit-BookItalic-Trial.woff2') format('woff2'),
-        /* Super Modern Browsers */
-        url('../fonts/ABCFavorit-BookItalic-Trial.woff') format('woff');
-    /* Pretty Modern Browsers */
-    font-style: italic;
-    font-display: swap;
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: Favorit;
-    src: url('../fonts/ABCFavorit-Book-Trial.ttf') format('ttf'),
-        url('../fonts/ABCFavorit-Book-Trial.woff2') format('woff2'),
-        /* Super Modern Browsers */
-        url('../fonts/ABCFavorit-Book-Trial.woff') format('woff');
-    /* Pretty Modern Browsers */
+    font-family: "Marfa";
+    src: url("../fonts/ABCMarfa-Bold-Trial.woff2") format("woff2"), url("../fonts/ABCMarfa-Bold-Trial.woff") format("woff"), url("../fonts/ABCMarfa-Bold-Trial.otf") format("opentype");
+    font-display: auto;
     font-style: normal;
-    font-display: swap;
+    font-weight: 600;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Marfa";
+    src: url("../fonts/ABCMarfa-Medium-Trial.woff2") format("woff2"), url("../fonts/ABCMarfa-Medium-Trial.woff") format("woff"), url("../fonts/ABCMarfa-Medium-Trial.otf") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Marfa";
+    src: url("../fonts/ABCMarfa-Regular-Trial.woff2") format("woff2"), url("../fonts/ABCMarfa-Regular-Trial.woff") format("woff"), url("../fonts/ABCMarfa-Regular-Trial.otf") format("opentype");
+    font-display: auto;
+    font-style: normal;
     font-weight: 400;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Marfa";
+    src: url("../fonts/ABCMarfa-Light-Trial.woff2") format("woff2"), url("../fonts/ABCMarfa-Light-Trial.woff") format("woff"), url("../fonts/ABCMarfa-Light-Trial.otf") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 300;
+    font-stretch: normal;
 }

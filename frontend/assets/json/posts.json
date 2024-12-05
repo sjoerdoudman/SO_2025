@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "title": "How do I make the page look more pretty?",
+        "slug": "how-do-i-make-the-page-look-more-pretty",
+        "featured_image": {
+            "alt": "layout",
+            "sizes": {
+                "sm": "/img/layout.png",
+                "md": "/img/layout.png",
+                "xl": "/img/layout.png"
+            }
+        }
+    },
+    {
+        "id": 2,
+        "title": "How do I get on top of all the search results quickly?",
+        "slug": "how-do-i-get-on-top-of-all-the-search-results-quickly",
+        "featured_image": {
+            "alt": "seo",
+            "sizes": {
+                "sm": "/img/seo.png",
+                "md": "/img/seo.png",
+                "xl": "/img/seo.png"
+            }
+        }
+    },
+    {
+        "id": 3,
+        "title": "Can you just repeat the code but then headless?",
+        "slug": "can-you-just-repeat-the-code-but-then-headless",
+        "featured_image": {
+            "alt": "headless",
+            "sizes": {
+                "sm": "/img/headless.png",
+                "md": "/img/headless.png",
+                "xl": "/img/headless.png"
+            }
+        }
+    }
+]

@@ -21,13 +21,13 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['"Favorit"', ...defaultTheme.fontFamily.sans],
+                sans: ['"Marfa"', ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 'dark': '#191919',
-                'light': '#bcbcbc',
-                'glr': '#66FF00',
-                'glr-grey': '#464646',
+                'light': '#f4f4f4',
+                'accent-dark': '#fff08a',
+                'accent-light': 'rgb(182 166 102)'
             },
             spacing: {
                 'quadruple-space': 'calc( 8vw + 3.2vh + 3.2rem )',

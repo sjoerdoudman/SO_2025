@@ -1,7 +1,4 @@
 @layer base {
-    html {
-        @apply bg-black text-dark;
-    }
 
     body {
         @apply overflow-y-scroll overflow-x-hidden antialiased;
@@ -17,20 +14,12 @@
     .h4,
     h5,
     .h5 {
-        @apply text-white;
+        @apply leading-tight;
     }
 
     h1,
-    .h1,
-    h2,
-    .h2,
-    h3,
-    .h3,
-    h4,
-    .h4,
-    h5,
-    .h5 {
-        @apply leading-tight italic;
+    .h1 {
+        @apply text-[calc(2vw+2vh+2rem)] font-semibold;
     }
 
     h2,
@@ -91,11 +80,19 @@
         @apply mt-quarter-space
     }
 
-    .paragraph p {
-        @apply text-light
-    }
-
     small {
         display: block;
+    }
+
+    em {
+        @apply not-italic;
+    }
+
+    .theme--light em {
+        @apply text-accent-light;
+    }
+
+    .theme--dark em {
+        @apply text-accent-dark;
     }
 }

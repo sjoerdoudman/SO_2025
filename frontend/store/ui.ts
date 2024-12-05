@@ -1,5 +1,5 @@
+import { update } from 'lodash'
 import { defineStore } from 'pinia'
-import type { showCase } from '@/types';
 
 export const useUIStore = defineStore({
     id: 'ui-store',
@@ -23,7 +23,12 @@ export const useUIStore = defineStore({
             searchOpen: false,
             lastRoute: '' as string | null,
             animationsScroll: 0,
-            activeShowCase: null as showCase | null
+            darkMode: true,
+            themeColor: '#bf8ef7' as string,
+            showSink: true,
+            scPlayer: null as any,
+            isPlaying: false,
+            journalCat: false
         }
     },
     actions: {
@@ -60,6 +65,18 @@ export const useUIStore = defineStore({
         togglePageWipe(payload: boolean) {
             this.pageWipe = payload
         },
+        toggleDarkMode(payload: boolean) {
+            this.darkMode = payload
+        },
+        toggleShowSink(payload: boolean) {
+            this.showSink = payload
+        },
+        toggleIsPlaying(payload: boolean) {
+            this.isPlaying = payload
+        },
+        toggleJournalCat(payload: boolean) {
+            this.journalCat = payload
+        },
         updateCols(payload: number) {
             this.cols = payload
         },
@@ -81,8 +98,11 @@ export const useUIStore = defineStore({
         updateAnimationsScroll(payload: any) {
             this.animationsScroll = payload
         },
-        updateActiveShowCase(payload: any) {
-            this.activeShowCase = payload
+        updateThemeColor(payload: any) {
+            this.themeColor = payload
+        },
+        updateScPlayer(payload: any) {
+            this.scPlayer = payload
         }
     }
 })

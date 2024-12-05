@@ -1,24 +1,39 @@
 <template>
-    <nav class="main-nav flex flex-col lg:flex-row items-center lg:justify-between lg:gap-none">
-        <ul
-            class="flex flex-col lg:flex-row w-full lg:w-auto text-center lg:text-left gap-single-space lg:justify-between">
+    <nav class="flex items-center main-nav">
+        <ul class="flex gap-5 justify-between items-center w-full">
             <li>
-                <NavigationLink :item="{ url: '/over', title: 'Over CSD' }"></NavigationLink>
+                <nuxt-link class="relative" :to="'/about'">about SO</nuxt-link>
             </li>
             <li>
-                <NavigationLink :item="{ url: '/lessen', title: 'Lessen' }"></NavigationLink>
+                <nuxt-link class="relative" :to="'/journal'">Journal</nuxt-link>
             </li>
             <li>
-                <NavigationLink :item="{ url: '/templates', title: 'Templates' }"></NavigationLink>
+                <ElementsButton class="!py-1 !px-3 after:opacity-0" :url="'mailto:contact@sjoerdoudman.com'"
+                    :title="'contact'">
+                </ElementsButton>
+            </li>
+            <li class="hidden lg:block">
+                <div @click="toggleSink(showSink ? false : true)" class="cursor-pointer p-2 rounded-md"
+                    :class="[darkMode ? showSink ? 'bg-black/50' : 'bg-black/0' : showSink ? 'bg-white/50' : 'bg-white/0']">
+                    <svg class="icon icon-cog w-5 h-5 ease-in-out duration-200" :class="[showSink ? '' : 'rotate-90']"
+                        :style="{ fill: themeColor }">
+                        <use xlink:href="#icon-cog"></use>
+                    </svg>
+                </div>
             </li>
         </ul>
     </nav>
 </template>
-
-<script setup>
+<script setup lang="ts">
 import { useUIStore } from '@/store/ui';
 import { storeToRefs } from 'pinia';
+import { useCookies } from '@vueuse/integrations/useCookies';
 const ui = useUIStore();
-const { updateCursor } = ui;
-const { searchOpen, lastRoute, menuOpen } = storeToRefs(ui);
+const { toggleShowSink } = ui;
+const { darkMode, themeColor, showSink } = storeToRefs(ui);
+const cookies = useCookies();
+const toggleSink = (val: boolean) => {
+    cookies.set('show-sink', val, { path: '/', maxAge: 60 * 60 * 24 * 7 });
+    toggleShowSink(val);
+}
 </script>

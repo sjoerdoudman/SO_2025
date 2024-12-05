@@ -10,10 +10,10 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
         toggleSearchOpen,
         toggleIsHome,
         updateLastRoute,
-        updateProjectSlider,
         toggleIsTransitioning,
         toggleInverseHeader,
-        toggleMenuOpen
+        toggleMenuOpen,
+        toggleJournalCat
     } = ui;
     const { projectSlider } = storeToRefs(ui);
 
@@ -46,6 +46,11 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
         toggleIsHome(true);
     } else {
         toggleIsHome(false);
+    }
+
+    // if the route does not contain the journal path
+    if (!to.path.includes('/journal')) {
+        toggleJournalCat(false);
     }
 
     // End the page wipe after route actions, only if it was triggered

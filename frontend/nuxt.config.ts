@@ -14,13 +14,20 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon/favicon-96x96.png' },
         { rel: 'manifest', href: '/favicon/site.webmanifest' },
         { rel: 'manifest', href: '/favicon/site.webmanifest' }
-      ]
+      ],
+      script: [
+        {
+          type: 'text/javascript',
+          src: "https://w.soundcloud.com/player/api.js",
+          async: true
+        },
+      ],
     }
   },
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   devServer: {
-    port: 2025
+    port: 2027
   },
   css: ['~/assets/css/main.css'],
   postcss: {

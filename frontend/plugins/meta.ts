@@ -1,4 +1,4 @@
-import { defineNuxtPlugin, useServerSeoMeta } from 'nuxt/app';
+import { defineNuxtPlugin, useSeoMeta } from 'nuxt/app';
 export default defineNuxtPlugin((nuxtApp) => {
     interface Page {
         title: string
@@ -12,8 +12,8 @@ export default defineNuxtPlugin((nuxtApp) => {
     }
 
     const getTranslatedMeta = (page: Page) => {
-        console.log(page.seo_title);
-        return useServerSeoMeta({
+        // console.log(page.seo_title);
+        return useSeoMeta({
             title: () => page.seo_title !== null ? `${page.seo_title} - Plomp` : `${page.title} - Plomp`,
             ogTitle: () => page.og_data?.title !== null ? page.og_data.title : `${page.title} - Plomp`,
             twitterTitle: () => page.og_data?.title !== null ? `${page.seo_title} - Plomp` : page.og_data.title,
