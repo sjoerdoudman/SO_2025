@@ -1,6 +1,5 @@
 <template>
-    <nuxt-link :to="`/journal/${post.slug}`"
-        class="relative border-b-2 border-dotted border-opacity-10 pb-half-space group/newsitem overflow-hidden"
+    <article class="relative border-b-2 border-dotted border-opacity-10 pb-half-space group/newsitem overflow-hidden"
         :style="{ borderColor: $hexToRgba(themeColor, .2) }">
         <figure class="aspect-video bg-yellow-200 overflow-hidden">
             <img :src="post.featured_image.sizes.md" :alt="post.featured_image.alt"
@@ -9,7 +8,7 @@
         <h3 class="h5 font-semibold mt-quarter-space" v-text="post.title"></h3>
         <div class="absolute w-3 h-3 rotate-45 bottom-0 left-1/2 -translate-y-1/2 translate-y-[150%] group-hover/newsitem:translate-y-1/2 duration-300"
             :style="{ background: themeColor }"></div>
-    </nuxt-link>
+    </article>
 </template>
 
 <script setup lang="ts">

@@ -42,9 +42,13 @@
         @apply text-[calc(.65vw+.65vh+.65rem)];
     }
 
+    .intro {
+        @apply text-[calc(.55vw+.55vh+.55rem)] leading-relaxed;
+    }
+
     p,
     .p {
-        @apply leading-relaxed text-base not-italic md:text-[calc(.5vw+.5vh+.5rem)];
+        @apply leading-relaxed text-base not-italic md:text-[calc(.475vw+.475vh+.475rem)];
     }
 
     .paragraph h1+p,
@@ -78,6 +82,17 @@
     .paragraph h5+ul,
     .paragraph .h5+ul {
         @apply mt-quarter-space
+    }
+
+    .paragraph h2,
+    .paragraph .h2,
+    .paragraph h3,
+    .paragraph .h3,
+    .paragraph h4,
+    .paragraph .h4,
+    .paragraph h5,
+    .paragraph .h5 {
+        @apply font-semibold;
     }
 
     small {

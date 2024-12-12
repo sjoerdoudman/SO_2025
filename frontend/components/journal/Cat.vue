@@ -1,6 +1,5 @@
 <template>
-    <div :class="journalCat ? 'opacity-100 duration-[1s]' : 'opacity-0 translate-y-full duration-300'"
-        class="fixed z-30 w-[20vw] bottom-0 right-single-space pointer-events-none">
+    <div ref="cat" v-if="show" class="fixed z-30 w-[20vw] bottom-0 right-single-space pointer-events-none opacity-0">
         <div ref="cloud" class="relative w-full aspect-square duration-200 translate-y-10">
             <svg v-for="(item, index) in randomArray" :key="index" :style="{
                 left: `${item.left}%`,
@@ -96,8 +95,10 @@
 </template>
 
 <script setup lang="ts">
+import { ref, watch } from 'vue';
 import { useUIStore } from '@/store/ui';
 import { storeToRefs } from 'pinia';
+import { gsap } from 'gsap';
 import { random } from 'lodash';
 
 type randomItem = {
@@ -109,8 +110,10 @@ type randomItem = {
     opacity: number
 }
 
+const show = ref(false);
 const ui = useUIStore();
-const { themeColor, darkMode, journalCat } = storeToRefs(ui);
+const { themeColor, darkMode, journalCat, isCatTransitioning } = storeToRefs(ui);
+const cat = ref<HTMLElement | null>(null);
 
 const createRandomArray = () => {
     const colors = darkMode.value ? [
@@ -134,5 +137,33 @@ const createRandomArray = () => {
     return arr
 }
 
+function maximize() {
+    gsap.fromTo(cat.value, { yPercent: 100, opacity: 0 }, { yPercent: 0, duration: 1, opacity: 1, ease: 'power4.out' });
+}
+
+function minimize() {
+    gsap.fromTo(cat.value, { yPercent: 0, opacity: 1 }, { yPercent: 100, duration: .6, opacity: 0, ease: 'power4.out' });
+}
+
 const randomArray = createRandomArray()
+
+watch(journalCat, (val) => {
+    if (val) {
+        show.value = true
+        setTimeout(() => {
+            maximize()
+        }, 100);
+    } else {
+        setTimeout(() => {
+            minimize()
+        }, 500);
+        setTimeout(() => {
+            show.value = false
+        }, 1100);
+    }
+})
+
+watch(isCatTransitioning, (val) => {
+    gsap.to(cat.value, { xPercent: 50, duration: .5, ease: 'power4.out' });
+})
 </script>

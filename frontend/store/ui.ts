@@ -8,6 +8,7 @@ export const useUIStore = defineStore({
             isHome: false,
             menuOpen: false,
             isTransitioning: false,
+            isCatTransitioning: false,
             isFetching: false,
             cols: 4,
             pageWipe: false,
@@ -17,6 +18,8 @@ export const useUIStore = defineStore({
             inverseHeader: false,
             viewportActive: false,
             keystrokes: 0,
+            clientSpeaks: 0,
+            developerSpeaks: 0,
             mouseX: 0,
             mouseY: 0,
             cursor: null,
@@ -40,6 +43,9 @@ export const useUIStore = defineStore({
         },
         toggleIsTransitioning(payload: boolean) {
             this.isTransitioning = payload
+        },
+        toggleIsCatTransitioning(payload: boolean) {
+            this.isCatTransitioning = payload
         },
         toggleIsFetching(payload: boolean) {
             this.isFetching = payload
@@ -85,6 +91,12 @@ export const useUIStore = defineStore({
         },
         addKeystroke() {
             this.keystrokes++
+        },
+        addClientSpeaks() {
+            this.clientSpeaks++
+        },
+        addDeveloperSpeaks() {
+            this.developerSpeaks++
         },
         updateMouseX(payload: any) {
             this.mouseX = payload

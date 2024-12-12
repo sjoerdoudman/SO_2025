@@ -31,7 +31,8 @@
                     <hr class="border-dotted border-b-2 border-dotted opacity-20" :style="{ borderColor: themeColor }">
                 </article>
                 <div class="grid gap-single-space grid-cols-3">
-                    <JournalTeaser v-for="(post, index) in posts" :key="index" :post="post"></JournalTeaser>
+                    <JournalTeaser @click="openPost(post)" v-for="(post, index) in posts" :key="index" :post="post">
+                    </JournalTeaser>
                 </div>
             </div>
         </ElementsContainer>
@@ -43,6 +44,7 @@
 // import type { Page } from '@/types';
 import { onMounted } from 'vue';
 // import { useCMSStore } from '@/store/cms';
+import { useRouter } from 'vue-router';
 import { useUIStore } from '@/store/ui';
 import { storeToRefs } from 'pinia';
 import posts from '@/assets/json/posts.json';
@@ -51,8 +53,24 @@ import posts from '@/assets/json/posts.json';
 // const { pages } = storeToRefs(store);
 
 const ui = useUIStore();
-const { toggleJournalCat } = ui;
+const { toggleJournalCat, toggleIsTransitioning, toggleIsCatTransitioning } = ui;
 const { darkMode, themeColor } = storeToRefs(ui);
+const router = useRouter();
+
+const openPost = (post: any) => {
+    const url = `/journal/${post.slug}`;
+    toggleIsTransitioning(true);
+    toggleIsCatTransitioning(true);
+    setTimeout(() => {
+        router.push(url);
+    }, 500);
+    setTimeout(() => {
+        toggleJournalCat(false);
+    }, 1500);
+    setTimeout(() => {
+        toggleIsCatTransitioning(false);
+    }, 2500);
+};
 
 onMounted(() => {
     toggleJournalCat(true);

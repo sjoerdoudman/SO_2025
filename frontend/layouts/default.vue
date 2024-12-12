@@ -5,7 +5,6 @@
             <div class="h-full w-full border-x-2 border-dotted mx-10 opacity-10" :style="{ borderColor: themeColor }">
             </div>
         </div>
-        <ShowCaseFullscreen></ShowCaseFullscreen>
         <LayoutIcons></LayoutIcons>
         <LayoutHeader></LayoutHeader>
         <JournalCat></JournalCat>
