@@ -1,5 +1,5 @@
 <template>
-    <div ref="cat" v-if="show" class="fixed z-30 w-[20vw] bottom-0 right-single-space pointer-events-none opacity-0">
+    <div ref="cat" v-if="show" class="hidden md:block fixed z-20 md:z-30 w-[20vw] bottom-0 right-single-space pointer-events-none opacity-0">
         <div ref="cloud" class="relative w-full aspect-square duration-200 translate-y-10">
             <svg v-for="(item, index) in randomArray" :key="index" :style="{
                 left: `${item.left}%`,

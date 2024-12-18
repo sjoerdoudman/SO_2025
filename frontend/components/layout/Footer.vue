@@ -11,9 +11,9 @@
                     <span>O</span>
                 </p>
             </div> -->
-            <div ref="dialogue" class="absolute left-[22vw] top-[25vh]">
+            <div ref="dialogue" class="absolute left-1/2 md:left-[22vw] top-auto md:top-[25vh] bottom-[25vh] md:bottom-auto -translate-x-1/2 md:-translate-x-0">
                 <div :class="[show ? 'translate-y-0 delay-[1s]' : 'translate-y-4 opacity-0']"
-                    class="relative bg-yellow-200 p-half-space w-[42vw] duration-300">
+                    class="relative bg-yellow-200 p-half-space w-[80vw] md:w-[42vw] duration-300">
                     <p class="h2 font-semibold text-dark">
                         Please... Check out my <nuxt-link class="underline" to="/journal">Journal</nuxt-link>. It’s
                         free!
@@ -156,7 +156,7 @@
                 </svg>
             </div>
             <div ref="catTwo" :class="[show ? '' : 'translate-y-full']"
-                class="absolute left-[10vw] -bottom-2 w-[8vw] h-[8vw] duration-[1s]">
+                class="absolute left-[10vw] bottom-0 md:-bottom-2 w-[8vw] h-[8vw] duration-[1s]">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 200"
                     style="enable-background:new 0 0 200 200;" xml:space="preserve">
@@ -186,7 +186,6 @@ import { storeToRefs } from 'pinia';
 
 const store = useCMSStore();
 const ui = useUIStore();
-const { showCases } = storeToRefs(store);
 const { toggleInverseHeader } = ui;
 const { themeColor, darkMode } = storeToRefs(ui);
 

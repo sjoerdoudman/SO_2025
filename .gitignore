@@ -22,3 +22,11 @@ frontend/.idea
 frontend/.env
 frontend/.env.*
 frontend/!.env.example
+
+# Editor files
+frontend/.vscode
+frontend/.idea
+
+# cms
+so_cms
+!so_cms/wp-content

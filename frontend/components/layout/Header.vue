@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w-full pt-[60px] z-20">
+    <div class="relative w-full pt-[60px] z-30">
         <div class="w-screen h-[60px] py-3 fixed left-0 top-0 z-10 border-b-2 border-dotted transition-all ease-in-out duration-300"
             :style="{ borderColor: $hexToRgba(themeColor, '.1') }"
             :class="[darkMode ? 'bg-dark' : 'bg-light', scrolled ? 'lg:py-3 lg:h-[60px]' : 'lg:py-6 lg:h-[80px]']">
@@ -13,7 +13,7 @@
                 </component>
                 <NavigationMenu class="hidden lg:block"></NavigationMenu>
                 <div class="relative h-3 mt-3 lg:hidden ease-in-out duration-300" :class="menuOpen ? 'w-6' : 'w-8'"
-                    @click="toggleMenuOpen(true)">
+                    @click="toggleMenuOpen(menuOpen ? false : true)">
                     <div class="absolute left-0 w-full h-[3px] ease-in-out duration-300 rounded-sm"
                         :class="menuOpen ? 'top-1/2 -translate-y-1/2 rotate-45' : 'top-0'"
                         :style="{ backgroundColor: themeColor }"></div>
@@ -48,5 +48,17 @@ const ui = useUIStore();
 const { isHome, darkMode, themeColor, menuOpen, showSink } = storeToRefs(ui);
 const { toggleMenuOpen } = ui;
 const scrolled = ref(false);
+
+const scrollListener = () => {
+    scrolled.value = window.scrollY > 0;
+};
+
+onMounted(() => {
+    window.addEventListener('scroll', scrollListener);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', scrollListener);
+});
 
 </script>

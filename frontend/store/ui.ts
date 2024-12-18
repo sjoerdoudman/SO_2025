@@ -18,8 +18,8 @@ export const useUIStore = defineStore({
             inverseHeader: false,
             viewportActive: false,
             keystrokes: 0,
-            clientSpeaks: 0,
-            developerSpeaks: 0,
+            clientSpeaks: false,
+            developerSpeaks: false,
             mouseX: 0,
             mouseY: 0,
             cursor: null,
@@ -31,7 +31,8 @@ export const useUIStore = defineStore({
             showSink: true,
             scPlayer: null as any,
             isPlaying: false,
-            journalCat: false
+            journalCat: false,
+            catDialogue: null as HTMLDivElement | null
         }
     },
     actions: {
@@ -83,6 +84,12 @@ export const useUIStore = defineStore({
         toggleJournalCat(payload: boolean) {
             this.journalCat = payload
         },
+        toggleClientSpeaks(payload: boolean) {
+            this.clientSpeaks = payload
+        },
+        toggleDeveloperSpeaks(payload: boolean) {
+            this.developerSpeaks = payload
+        },
         updateCols(payload: number) {
             this.cols = payload
         },
@@ -91,12 +98,6 @@ export const useUIStore = defineStore({
         },
         addKeystroke() {
             this.keystrokes++
-        },
-        addClientSpeaks() {
-            this.clientSpeaks++
-        },
-        addDeveloperSpeaks() {
-            this.developerSpeaks++
         },
         updateMouseX(payload: any) {
             this.mouseX = payload
@@ -115,6 +116,9 @@ export const useUIStore = defineStore({
         },
         updateScPlayer(payload: any) {
             this.scPlayer = payload
+        },
+        updateCatDialogue(payload: any) {
+            this.catDialogue = payload
         }
     }
 })

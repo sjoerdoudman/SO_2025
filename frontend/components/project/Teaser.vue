@@ -16,21 +16,29 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'nuxt/app';
 import { defineProps } from 'vue';
 import { gsap } from 'gsap';
 import { useUIStore } from '@/store/ui';
 import type { Project } from '@/types';
 import { ref, onMounted } from 'vue';
+import { storeToRefs } from 'pinia';
 
+const router = useRouter();
 const ui = useUIStore();
-const { themeColor } = ui;
+const { toggleIsTransitioning } = ui;
+const { themeColor } = storeToRefs(ui);
 const props = defineProps<{
     project: Project;
     index: number;
     show: boolean;
 }>();
 
-const openProject = (project: Project) => {
-    console.log(project);
-}
+const openProject = (project: any) => {
+    const url = `/projects/${project.slug}`;
+    toggleIsTransitioning(true);
+    setTimeout(() => {
+        router.push(url);
+    }, 500);
+};
 </script>

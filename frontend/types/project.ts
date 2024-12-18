@@ -1,13 +1,21 @@
-import type { Paragraph, Image, Slide } from '@/types';
+import type { Image, Slide } from '@/types';
+
+interface Paragraph {
+    type: string,
+    text: string
+}
 
 export interface Project {
-    id: string,
+    client: string,
+    url?: string,
+    year: string,
+    type: string
+    stack?: string,
     title: string,
     slug: string,
     excerpt?: string,
-    paragraphs?: Paragraph[],
-    stack?: string,
     featured_image: Image,
+    paragraphs?: Paragraph[],
     slides?: Slide[],
     svg?: {
         viewbox: string,

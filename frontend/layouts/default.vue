@@ -7,6 +7,7 @@
         </div>
         <LayoutIcons></LayoutIcons>
         <LayoutHeader></LayoutHeader>
+        <NavigationMobile></NavigationMobile>
         <JournalCat></JournalCat>
         <div ref="content" class="relative">
             <slot class="min-h-full" />
@@ -28,7 +29,7 @@ const store = useCMSStore();
 const ui = useUIStore();
 const cookies = useCookies();
 
-const { fetchPages } = store;
+const { fetchPages, fetchPosts } = store;
 const { toggleShowLoader, updateMouseX, updateMouseY, updateThemeColor, toggleDarkMode, toggleShowSink } = ui;
 const { firstLoad, isTransitioning, themeColor, darkMode } = storeToRefs(ui);
 
@@ -38,6 +39,7 @@ const onInit = async () => {
     // Fetch the data
     await Promise.all([
         fetchPages({}),
+        fetchPosts({}),
     ]).then(() => {
         // console.log(store.pages);
     });

@@ -5,7 +5,7 @@
                 :class="[showContent ? '' : 'opacity-0 translate-x-2']">
                 projects
             </h2>
-            <div class="flex items-center">
+            <!-- <div class="flex items-center">
                 <span class="mr-2 duration-300 delay-200 hidden md:block"
                     :class="[showContent ? '' : 'opacity-0 translate-x-2']">
                     display mode
@@ -33,7 +33,7 @@
                             y="0" width="25" height="22"></rect>
                     </svg>
                 </div>
-            </div>
+            </div> -->
         </ElementsContainer>
         <ElementsContainer>
             <TransitionGroup @enter="onEnter" @leave="onLeave">

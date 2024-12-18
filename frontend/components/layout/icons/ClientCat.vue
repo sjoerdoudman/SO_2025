@@ -15,31 +15,35 @@
 </template>
 
 <script setup lang="ts">
+type Timeout = any
 import { ref, watch } from 'vue'
 import { useUIStore } from '@/store/ui';
 import { storeToRefs } from 'pinia';
 const ui = useUIStore();
 const { darkMode, clientSpeaks } = storeToRefs(ui);
-const mouthOpen = ref<boolean>(true)
+const mouthOpen = ref<boolean>(false)
 const isSpeaking = ref<boolean>(false)
+let speakInterval: Timeout | number | undefined = undefined;
 
 const startTalking = () => {
     if (isSpeaking.value) return;
     isSpeaking.value = true;
 
-    let toggleCount = 0; // Counter for the toggling
-    const interval = setInterval(() => {
-        mouthOpen.value = !mouthOpen.value; // Toggle mouthOpen
-        toggleCount++;
-
-        if (toggleCount === 6) {
-            clearInterval(interval); // Stop after 5 toggles
-            isSpeaking.value = false; // Reset isSpeaking
-        }
-    }, 300); // Toggle every 300ms
+    if (speakInterval === undefined) {
+        speakInterval = setInterval(() => {
+            mouthOpen.value = !mouthOpen.value; // Toggle mouthOpen
+        }, 300); // Toggle every 300ms
+    }
 };
 
-watch(clientSpeaks, () => {
-    startTalking()
+const stopTalking = () => {
+    clearInterval(speakInterval);
+    speakInterval = undefined;
+    mouthOpen.value = false;
+    isSpeaking.value = false;
+};
+
+watch(clientSpeaks, (val) => {
+    val ? startTalking() : stopTalking();
 })
 </script>

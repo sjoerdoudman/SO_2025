@@ -1,17 +1,19 @@
 <template>
     <section v-for="(m, index) in items" :key="index">
-        <component :is="componentMap[m.type]" :item="m.item"></component>
+        <component :is="componentMap[m.acf_fc_layout]" :item="m"></component>
     </section>
 </template>
 
 <script setup lang="ts">
 import type { Module } from '@/types';
 import { defineComponent } from 'vue';
-import image_module from '../modules/Image.vue';
-import paragraphs_module from '../modules/Paragraphs.vue';
+import media from '../modules/Media.vue';
+import paragraph from '../modules/Paragraph.vue';
+import conversation from '../modules/Conversation.vue';
 const componentMap: { [key: string]: ReturnType<typeof defineComponent> } = {
-    image_module,
-    paragraphs_module
+    media,
+    paragraph,
+    conversation
     // Add other components as needed
 };
 const props = defineProps({

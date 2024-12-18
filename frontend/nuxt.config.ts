@@ -36,7 +36,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ['@pinia/nuxt', '@nuxt/image', 'nuxt-viewport', 'nuxt-security'],
+  modules: ['@pinia/nuxt', '@nuxt/image', 'nuxt-viewport'],
   // @ts-ignore
   image: {
     // Options
@@ -46,11 +46,14 @@ export default defineNuxtConfig({
       apiBase: process.env.NUXT_PUBLIC_API_BASE,
     }
   },
-  security: {
-    headers: {
-      permissionsPolicy: {
-        'fullscreen': ['self']
-      }
-    }
-  }
+  // security: {
+  //   headers: {
+  //     permissionsPolicy: {
+  //       'fullscreen': ['self']
+  //     },
+  //     contentSecurityPolicy: {
+  //       'img-src': ["'self'", 'http://so-cms.test', 'data:'],
+  //     },
+  //   }
+  // }
 })

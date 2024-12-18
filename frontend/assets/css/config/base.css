@@ -14,7 +14,7 @@
     .h4,
     h5,
     .h5 {
-        @apply leading-tight;
+        @apply leading-tight font-bold;
     }
 
     h1,
@@ -42,7 +42,8 @@
         @apply text-[calc(.65vw+.65vh+.65rem)];
     }
 
-    .intro {
+    p.intro,
+    .intro p {
         @apply text-[calc(.55vw+.55vh+.55rem)] leading-relaxed;
     }
 
@@ -109,5 +110,9 @@
 
     .theme--dark em {
         @apply text-accent-dark;
+    }
+
+    .paragraph a {
+        @apply text-accent-light underline underline-offset-4 hover:no-underline;
     }
 }

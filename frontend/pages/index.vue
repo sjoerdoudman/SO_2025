@@ -1,8 +1,8 @@
 <template>
     <div :class="[darkMode ? 'bg-dark' : 'bg-light']" class="relative z-10 mb-[100vh] pt-[60px] pb-double-space">
         <ElementsContainer class="w-full pb-single-space">
-            <div class="content-column paragraph">
-                <h2>
+            <div class="content-column">
+                <h2 class="font-bold">
                     Web development &amp; Design with a focus on the <em>creative sector</em>
                 </h2>
                 <div class="mt-half-space">

@@ -1,12 +1,13 @@
 [
     {
-        "client": "ArchitectenRegister",
+        "client": "Architecten&shy;Register",
+        "url": "https://www.architectenregister.nl",
         "year": "2023/2024",
         "type": "Rebranding & website",
-        "stack": "Laravel, Vue3, Nuxt3",
+        "stack": "Laravel (Statamic), Vue3, Nuxt3",
         "title": "Decoupled registration platform for all Architects in the Netherlands",
         "slug": "architectenregister",
-        "excerpt": "New website Architectenregister",
+        "excerpt": "A new home for the Architects Register",
         "featured_image": {
             "alt": "architectenregister",
             "sizes": {
@@ -22,15 +23,15 @@
             },
             {
                 "type": "text",
-                "text": "Een technische uitdaging was het incorpereren en inzichtelijk maken van het register zelf.  <a href='https://www.architectenregister.nl'>architectenregister.nl</a> biedt daarnaast informatie over het registratieproces, links naar registratieformulieren en een zeer ruim bij- en nascholingsaanbod voor haar leden."
+                "text": "A technical challenge was incorporating and visualizing the register itself. Additionally, architectenregister.nl provides information about the registration process, links to registration forms, and a very extensive range of further education and training opportunities for its members."
             },
             {
                 "type": "text",
-                "text": "Wij wilden graag een vernieuwende site aanbieden en hier hoort uiteraard ook nieuwe techniek bij. Hoewel dit een uitdaging vormde voor een website van deze omvang hebben we 'decoupled architecture' geambieerd en dat heeft zich uitbetaald. Dit betekend een Frontend op een standalone omgeving draait en zijn data ophaalt van specifieke data endpoints."
+                "text": "We wanted to offer an innovative site, and naturally, this also involves new technology. While this posed a challenge for a website of this scale, we aimed for a 'decoupled architecture,' and it has paid off. This means the Frontend runs in a standalone environment and retrieves its data from specific data endpoints."
             },
             {
                 "type": "text",
-                "text": "Het nieuwe architectenregister is gemaakt met een Laravel CMS (Statemic), geïmplementeerd door <a href='https://rox.nl/' target='_blank'>Rox</a> wat fungeert als API voor een Vue(3)/Nuxt(3) applicatie. Dit bood ook de mogelijkheid om een externe site search te maken via Algolia (wat uitmuntende snelheid in de zoekacties oplevert) en de toekomstige potentie om ook andere bronnen/API's aan te spreken."
+                "text": "The new architectenregister was built with a Laravel CMS (Statamic), implemented by <a href='https://rox.nl/' target='_blank'>Rox</a>, which serves as the API for a Vue(3)/Nuxt(3) application. This also enabled the creation of an external site search using Algolia (delivering excellent search speed) and offers future potential to connect with other sources/APIs."
             }
         ],
         "slides": [
@@ -48,7 +49,7 @@
             },
             {
                 "id": 1,
-                "caption": "Event overzicht met filters",
+                "caption": "Event overview with filters",
                 "img": {
                     "sizes": {
                         "sm": "/img/architectenregister-02.jpg",
@@ -59,7 +60,7 @@
             },
             {
                 "id": 3,
-                "caption": "Standaard pagina template",
+                "caption": "Standard page template",
                 "img": {
                     "sizes": {
                         "sm": "/img/architectenregister-03.jpg",
@@ -70,7 +71,7 @@
             },
             {
                 "id": 4,
-                "caption": "Zoekfunctie voor geregistreerde architecten",
+                "caption": "Search option for registered architects",
                 "img": {
                     "sizes": {
                         "sm": "/img/architectenregister-04.jpg",
@@ -81,7 +82,7 @@
             },
             {
                 "id": 5,
-                "caption": "Alle informatie in 1 oogopslag",
+                "caption": "The whole picture at a glance",
                 "img": {
                     "sizes": {
                         "sm": "/img/architectenregister-05.jpg",
@@ -92,7 +93,7 @@
             },
             {
                 "id": 6,
-                "caption": "Footer met dynamische payoff",
+                "caption": "Footer with a dynamic payoff",
                 "img": {
                     "sizes": {
                         "sm": "/img/architectenregister-06.jpg",
@@ -126,11 +127,15 @@
         "paragraphs": [
             {
                 "type": "text",
-                "text": "In samenwerking met vormgevers van Silo hebben we met veel plezier gewerkt aan het nieuwe <a href='https://silo.nl'>silo.nl</a>. Met hun in het oog springende designs, veelgeprezen en award-winnende projecten is Silo sinds jaar en dag een bekende speler in het landschap van design in Nederland en is het een eer om voor en met deze studio te mogen werken. De herijking van de business strategie en een toenemende focus op de internationale markt waren de aanknopingspunten om de website een grondige update te geven."
+                "text": "In collaboration with the designers at Silo, we worked with great pleasure on the new silo.nl. With their striking designs and acclaimed, award-winning projects, Silo has long been a prominent player in the Dutch design landscape, and it’s an honor to work for and with this studio. The redefinition of their business strategy and an increasing focus on the international market were key reasons to give the website a thorough update."
             },
             {
                 "type": "text",
-                "text": "Het design is strak en minimalistisch, dit vereiste extra aandacht uitgegaan voor typografie en plaatsing. Belangrijk voor deze website was de redactionele vrijheid die kon worden geboden door middel van verschillende visuele modules. Hiermee kunnen afbeeldingen, video's quotes en teksten mooi vormgegeven op de pagina worden getoond. <br>Ook is er een Blog in de vorm van de 'Journal' pagina. Waarbij de mogelijkheid bestaat om iedere blogpost een eigen themakleur te geven. Voor dit project is er gebruik gemaakt van de meest recente versie van Nuxt, Nuxt 3. Voor het beheer van de content heeft WordPress uitkomst geboden. Dankzij de REST API van Wordpress kon er een site gebouwd worden op een hedendaags javascript framework, eenvoudig te beheren vanaf het WP dashboard."
+                "text": "The design is sleek and minimalist, requiring extra attention to typography and placement. A crucial aspect of this website was providing editorial freedom through various visual modules. These allow images, videos, quotes, and texts to be beautifully presented on the page."
+            }, 
+            {
+                "type": "text",
+                "text": "Additionally, a blog is included in the form of the 'Journal' page, offering the option to assign a unique theme color to each blog post. This project utilized the latest version of Nuxt, Nuxt 3. For content management, WordPress proved to be the ideal solution. Thanks to WordPress’s REST API, a modern JavaScript framework-based site could be built while remaining easy to manage from the WP dashboard."
             }
         ],
         "slides": [
@@ -192,7 +197,7 @@
         "stack": "Laravel, Vue, Nuxt",
         "title": "Groote Museum Blikvanger",
         "slug": "groote-museum-blikvanger",
-        "excerpt": "Progressieve WebApp voor ARTIS Groote museum",
+        "excerpt": "Progressive Web App for ARTIS Groote Museum",
         "featured_image": {
             "alt": "Artis",
             "sizes": {
@@ -204,11 +209,11 @@
         "paragraphs": [
             {
                 "type": "text",
-                "text": "ARTIS Amsterdam heeft in mei 2022 zijn Groote museum heropend voor publiek. Na een lange renovatie is het weer mogelijk om kennis op te doen gedeeld door het Genootschap Natura Artis Magistra. Het biedt een blik op de wonderen van de natuur."
+                "text": "ARTIS Amsterdam reopened its Groote Museum to the public in May 2022. After an extensive renovation, it once again provides an opportunity to gain knowledge shared by the Natura Artis Magistra Society, offering a glimpse into the wonders of nature."
             },
             {
                 "type": "text",
-                "text": "Voor deze expositie ontwikkelde ik samen met vormgever <a target='_blank' href='https://ewalthert.com/'>Edgar Walthert</a> een PWA (Progressive Web App) ter ondersteuning van het museumbezoek. De app is zowel in een browser te bekijken als dat hij standalone op een telefoon te installeren is. Met deze PWA kan een bezoeker de kaart van het museum zien en bij iedere &lsquo;zone&rsquo; een tweetal woorden invoeren waarmee aan het einde van het bezoek een unieke uitkomst wordt gegenereerd."
+                "text": "For this exhibition, Sjoerd Oudman studio developed a PWA (Progressive Web App) in collaboration with designer <a target='_blank' href='https://ewalthert.com/'>Edgar Walthert</a> to enhance the museum visit. The app can be accessed via a browser or installed as a standalone application on a phone. With this PWA, visitors can view the museum map and enter two words for each 'zone,' which generates a unique outcome at the end of the visit."
             }
         ],
         "slides": [
@@ -269,7 +274,7 @@
         "stack": "VILT (Vue, Inertia, Laravel, Tailwind)",
         "title": "iKOT vernieuwde website",
         "slug": "ikot-vernieuwde-website",
-        "excerpt": "Studentenkamer platform op een VILT stack",
+        "excerpt": "Student housing platform on a VILT stack",
         "featured_image": {
             "alt": "iKot",
             "sizes": {
@@ -281,15 +286,15 @@
         "paragraphs": [
             {
                 "type": "text",
-                "text": "iKot is de marktleider in Belgi&euml; als het gaat om online studentenkamers. iKot is vergelijkbaar met het Nederlandse kamernet.nl."
+                "text": "iKot is the market leader in Belgium for online student housing. iKot is comparable to the Dutch platform kamernet.nl. The platform provides students with the opportunity to find a room in one of Belgium's major cities. The platform is used by thousands of students every day."
             },
             {
                 "type": "text",
-                "text": "In samenwerking met <a target='_blank' href='https://florisdouma.nl/'>Floris Douma</a> is dit platform geheel vernieuwd en herbouwd op een VILT (Vue, Inertia, Laravel, Tailwind) stack. Dit is een stack die het krachtige maar zeer flexibele Laravel combineert met Vue waartussen Inertia als interface optreedt. Hierdoor wordt het mogelijk een groot en veeleisend platform als iKot goed te laten draaien en toch de voordelen te kunnen benutten van een hedendaags frontend framework"
+                "text": "In collaboration with <a target='_blank' href='https://florisdouma.nl/'>Floris Douma</a> this platform has been completely revamped and rebuilt using a VILT (Vue, Inertia, Laravel, Tailwind) stack. This stack combines the powerful yet highly flexible Laravel with Vue, with Inertia acting as the interface between them. This approach enables a large and demanding platform like iKot to run efficiently while taking full advantage of a modern frontend framework."
             },
             {
                 "type": "text",
-                "text": "De nieuwe website is in de juni 2023 live gegaan."
+                "text": "The new website went live in June 2023."
             }
         ],
         "slides": [
@@ -335,9 +340,9 @@
         "year": "2022",
         "type": "Website",
         "stack": "Vue, Nuxt, Laravel",
-        "title": "Hunger expositie website",
-        "slug": "hunger-expositie-website",
-        "excerpt": "Website voor de iET Hunger expositie in de Kunsthal",
+        "title": "Hunger exhibition website",
+        "slug": "hunger-exhibition-website",
+        "excerpt": "Website for the iET Hunger in Kunsthal Rotterdam",
         "featured_image": {
             "alt": "Hunger",
             "sizes": {
@@ -349,15 +354,15 @@
         "paragraphs": [
             {
                 "type": "text",
-                "text": "Hunger is een multidisciplinaire expositie gebaseerd op het gelijknamige autobiografische album van muzikant iET (Lisa van Viegen Mokoginta) en vormgever <a target='_blank' href='https://www.richdust.com/'>Rich Dust</a> (Sjoerd Koopmans)."
+                "text": "Hunger is a multidisciplinary exhibition based on the autobiographical album of the same name by musician iET (Lisa van Viegen Mokoginta) and designer <a target='_blank' href='https://www.richdust.com/'>Rich Dust</a> (Sjoerd Koopmans). The exhibition took place in Kunsthal Rotterdam from 18 February till 5th June 2022."
             },
             {
                 "type": "text",
-                "text": "Voor deze expositie en de online presentatie van het nieuwe album is de website van iET vernieuwd. Het is nu mogelijk om via de site het nieuwe album te luisteren. Ieder nummer van het het album heeft een eigen pagina op de website. Het idee van de opzet is een digitale variant te maken van de Artwork die gebruikelijk onderdeel is van een fysieke plaat of CD. Tijdens het luisteren van de muziek is het mogelijk om de artwork te bekijken en bij elke track is een begeleidende tekst geschreven door tekstschijver Marianne Clason"
+                "text": "For this exhibition and the online presentation of the new album, iET's website has been updated. It is now possible to listen to the new album directly on the site. Each track on the album has its own dedicated page. The concept is to create a digital version of the artwork traditionally included with a physical record or CD. While listening to the music, visitors can view the artwork, and each track is accompanied by a text written by lyricist Marianne Clason."
             },
             {
                 "type": "text",
-                "text": "De site bevat ook een agenda met de aankomende optredens dankzij de API van SongKick. De website is te bekijken op <a targer='_blank' href='https://ietmusic.com'>ietmusic.com</a>"
+                "text": "The site also features a calendar with upcoming performances, powered by the SongKick API. The website can be viewed at <a target='_blank' href='https://ietmusic.com'>ietmusic.com</a>."
             }
         ],
         "slides": [
@@ -419,7 +424,7 @@
         "stack": "Vue, Nuxt, WordPress",
         "title": "Taking Stock",
         "slug": "taking-stock",
-        "excerpt": "Digitaal archief van een workshop in Caïro",
+        "excerpt": "Digital archive of the Townhouse Gallery in Caïro",
         "featured_image": {
             "alt": "Taking stock",
             "sizes": {
@@ -431,15 +436,11 @@
         "paragraphs": [
             {
                 "type": "text",
-                "text": "Kunstenaars Elke Uitentuis en Wouter Osterholt en Mariam Elnozahy organiseerden een reeks interactieve teken-sessies in een installatie in de voormalige Townhouse Gallery. Deze installatie memoreert de sluiting van de Townhouse Gallery, die verloren ging aan politieke onrust en instabiliteit in Egypte."
+                "text": "Artists Elke Uitentuis, Wouter Osterholt, and Mariam Elnozahy organized a series of interactive drawing sessions in an installation at the former Townhouse Gallery. This installation commemorates the closure of the Townhouse Gallery, which was lost due to political unrest and instability in Egypt. The sessions were held in the summer of 2021."
             },
             {
                 "type": "text",
-                "text": "De website die ik ontwikkelde in samenwerking met mijn ega en vormgever Olga Oudman is gebouwd als een bewust chaotische zoekmachine waarin de gesprekken die tijdens deze sessies hebben plaatsgevonden kunnen worden teruggelezen. Ook toont de website de tekeningen die tijdens deze sessies zijn gemaakt. De website was ook een integraal onderdeel van <a target='_blank' href='https://framerframed.nl/en/exposities/expositie-taking-stock/'>de &lsquo;Taking Stock&rsquo; expositie die plaatsvond in Framer Framed in 2021</a>."
-            },
-            {
-                "type": "text",
-                "text": "Dit project is te zien op <a target='_blank' href='https://www.takingstock.site/'>www.takingstock.site</a>"
+                "text": "The website, developed collaboration with designer Olga Oudman, is built as a deliberately chaotic search engine where the conversations that took place during these sessions can be read again. The website also displays the drawings created during these sessions. The website was also an integral part of <a target='_blank' href='https://framerframed.nl/en/exposities/expositie-taking-stock/'>the 'Taking Stock' exhibition</a> that took place at Framer Framed in 2021."
             }
         ],
         "slides": [
@@ -497,7 +498,7 @@
         "stack": "PHP, Twig, Wordpress",
         "title": "Hizkia Corporate site",
         "slug": "hizkia-corporate-website",
-        "excerpt": "Corporate site voor een van Europa's grootste kunstvervoerders",
+        "excerpt": "Corporate site for one of Europe's leading art transport companies",
         "featured_image": {
             "alt": "Hizkia",
             "sizes": {
@@ -509,19 +510,19 @@
         "paragraphs": [
             {
                 "type": "text",
-                "text": "Hizkia is geen kleine jongen (of dame) als het gaat om het vervoer van kunst binnen Europa. met vestigingen van Parijs tot Stockholm leveren zij aan grote musea als het Rijksmuseum en KMSKA"
+                "text": "Hizkia is no small player when it comes to transporting art within Europe. With locations from Paris to Stockholm, they supply major museums such as the Rijksmuseum and KMSKA."
             },
             {
                 "type": "text",
-                "text": "hizkia.com was toe aan een nieuwe website waarop al hun activiteiten en vooral ook de contactinformatie voor hun vele vestigingen terug te vinden kon zijn."
+                "text": "Hizkia was in need of a new website where all their activities, and especially the contact information for their many locations, could be easily found."
             },
             {
                 "type": "text",
-                "text": "Een nieuw design werd ontworpen door design burau All This uit Rotterdam en in samenwerking met de mensen van <a href='https://jannesmannes.nl/' target='_blank'>Jannes en Mannes</a>, die als projectmaneger fungeerde en het framework hebben geleverd waarop deze site is gebouwd, werd in relatief korte tijd een nieuwe site gerealiseerd."
+                "text": "A new design was created by the design bureau All This from Rotterdam, and in collaboration with the team from <a href='https://jannesmannes.nl/' target='_blank'>Jannes en Mannes</a>, who acted as project managers and provided the framework on which the site was built, a new website was realized in a relatively short amount of time."
             },
             {
                 "type": "text",
-                "text": "De nieuwe website is in de vroege lente van 2023 live gegaan."
+                "text": "The new website went live in the early spring of 2023."
             }
         ],
         "slides": [
